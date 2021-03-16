@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="hooks">
+      <UniqueIdentifier>{6008fd20-7b03-4c90-9a25-576cea5f703a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\EAT">
+      <UniqueIdentifier>{2aa56c62-031e-4efe-a9d6-a526f80e4535}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\VMT">
+      <UniqueIdentifier>{0137ea79-e7a2-435d-ba20-2e93b42e251e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="openGL">
+      <UniqueIdentifier>{f19619ae-741d-4110-b1cc-420a8eee3706}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\EAT\Hooks">
+      <UniqueIdentifier>{1ebcc68f-60e6-4988-b8a6-afd77399deb3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="globalAddressess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gameSetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EAThook.cpp">
+      <Filter>hooks\EAT</Filter>
+    </ClCompile>
+    <ClCompile Include="EATHookManager.cpp">
+      <Filter>hooks\EAT</Filter>
+    </ClCompile>
+    <ClCompile Include="glDraw.cpp">
+      <Filter>openGL</Filter>
+    </ClCompile>
+    <ClCompile Include="WglSwapBuffers.cpp">
+      <Filter>hooks\EAT\Hooks</Filter>
+    </ClCompile>
+    <ClCompile Include="hookManager.cpp">
+      <Filter>hooks</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="globalAddressess.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gameSetup.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EAThook.h">
+      <Filter>hooks\EAT</Filter>
+    </ClInclude>
+    <ClInclude Include="EATHookManager.h">
+      <Filter>hooks\EAT</Filter>
+    </ClInclude>
+    <ClInclude Include="glDraw.h">
+      <Filter>openGL</Filter>
+    </ClInclude>
+    <ClInclude Include="hookManager.h">
+      <Filter>hooks</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

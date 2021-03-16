@@ -1,0 +1,6 @@
+﻿  EATHookManager.cpp
+  dllmain.cpp
+  Generating Code...
+  LINK : C:\Users\cheat\Desktop\cheats\Assault cube internal\AssaultCube_Internal\Debug\AssaultCube_Internal.dll not found or not built by the last incremental link; performing full link
+EATHookManager.obj : error LNK2005: "struct funcPointers funcPointer" (?funcPointer@@3UfuncPointers@@A) already defined in dllmain.obj
+C:\Users\cheat\Desktop\cheats\Assault cube internal\AssaultCube_Internal\Debug\AssaultCube_Internal.dll : fatal error LNK1169: one or more multiply defined symbols found
