@@ -17,10 +17,6 @@ namespace object
     EAThook eathook;
 }
 
-
-/// <summary>
-///  ssss
-/// </summary>
 typedef void(*cprintf)(char* msg, ...);
 
 DWORD WINAPI entry(LPVOID arg)

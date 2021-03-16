@@ -5,15 +5,14 @@
 ///	 TODO: FIX ALL #FIXME: 
 /// </summary>
 
-funcPointers funcPointer;   // #FIXME: this is not good to declare as global
-
+funcPointers funcPointer;
 namespace functionCopies
 {
 	hookTemplates::t_wglSwapBuffers o_wglSwapBuffers;
 	hookTemplates::t_doDamage o_doDamage;
 }
 
-
+/*
 BOOL __stdcall hooks::hk_wglSwapBuffers(HDC hdc)
 {
 	std::cout << "hooked" << std::endl;
@@ -26,7 +25,7 @@ int __cdecl hooks::hk_doDamage(int damage, void* pl, void* actor, int gu, bool g
 	damage = 9999;
 	return functionCopies::o_doDamage(damage, pl, actor, gu, gib, local);
 }
-
+*/
 
 void hooks::inithooks(EAThook& eatObject)
 {

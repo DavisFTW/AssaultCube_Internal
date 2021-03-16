@@ -5,6 +5,14 @@ auto EAThook::getOptionalHeader(IMAGE_NT_HEADERS*& nt_header)
 	return &nt_header->OptionalHeader;
 }
 
+EAThook::EAThook()
+{
+}
+
+EAThook::~EAThook()
+{
+}
+
 void EAThook::init(std::uintptr_t moduleBase)
 {
 	//setup our headers
@@ -27,7 +35,7 @@ std::uintptr_t* EAThook::functionByAddress(DWORD moduleBase, std::string functio
 		if (functionName == reinterpret_cast<char*>(moduleBase + exportNames[i]))
 		{
 			std::string foundFunction = reinterpret_cast<char*>(moduleBase + exportNames[i]);
-			return &exportFunctions[exportOrdinals[i]]; 
+			return (std::uintptr_t*)&exportFunctions[exportOrdinals[i]]; 
 		}
 	}
 }

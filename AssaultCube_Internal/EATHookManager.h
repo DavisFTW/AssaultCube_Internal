@@ -23,3 +23,4 @@ struct funcPointers
 	std::uintptr_t* wglSwapBuffers;
 	std::uintptr_t* WGLCurrentPtr;
 };
+

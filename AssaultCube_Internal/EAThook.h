@@ -21,6 +21,9 @@ public:
 
 	typedef BOOL(__stdcall* t_wglSwapBuffers)(HDC hdc);    // for wglSwapBuffers hook
 
+	EAThook();
+	~EAThook();
+
 	void init(std::uintptr_t moduleBase);
 	std::uintptr_t* functionByAddress(DWORD moduleBase, std::string functionName);
 	std::uintptr_t EATHook(DWORD moduleBase, std::uintptr_t* pointerToFunction, DWORD cheatFunction);
