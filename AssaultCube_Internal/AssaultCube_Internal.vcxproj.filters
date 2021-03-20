@@ -19,14 +19,17 @@
     <Filter Include="hooks\EAT">
       <UniqueIdentifier>{2aa56c62-031e-4efe-a9d6-a526f80e4535}</UniqueIdentifier>
     </Filter>
-    <Filter Include="hooks\VMT">
-      <UniqueIdentifier>{0137ea79-e7a2-435d-ba20-2e93b42e251e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="openGL">
       <UniqueIdentifier>{f19619ae-741d-4110-b1cc-420a8eee3706}</UniqueIdentifier>
     </Filter>
     <Filter Include="hooks\EAT\Hooks">
       <UniqueIdentifier>{1ebcc68f-60e6-4988-b8a6-afd77399deb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\EAT\EATHook">
+      <UniqueIdentifier>{986cda34-4f45-468a-9bad-8f4326c5b8ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\VMTHook">
+      <UniqueIdentifier>{0137ea79-e7a2-435d-ba20-2e93b42e251e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,12 +42,6 @@
     <ClCompile Include="gameSetup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EAThook.cpp">
-      <Filter>hooks\EAT</Filter>
-    </ClCompile>
-    <ClCompile Include="EATHookManager.cpp">
-      <Filter>hooks\EAT</Filter>
-    </ClCompile>
     <ClCompile Include="glDraw.cpp">
       <Filter>openGL</Filter>
     </ClCompile>
@@ -54,6 +51,9 @@
     <ClCompile Include="hookManager.cpp">
       <Filter>hooks</Filter>
     </ClCompile>
+    <ClCompile Include="EAThook.cpp">
+      <Filter>hooks\EAT\EATHook</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="globalAddressess.h">
@@ -62,17 +62,14 @@
     <ClInclude Include="gameSetup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EAThook.h">
-      <Filter>hooks\EAT</Filter>
-    </ClInclude>
-    <ClInclude Include="EATHookManager.h">
-      <Filter>hooks\EAT</Filter>
-    </ClInclude>
     <ClInclude Include="glDraw.h">
       <Filter>openGL</Filter>
     </ClInclude>
     <ClInclude Include="hookManager.h">
       <Filter>hooks</Filter>
+    </ClInclude>
+    <ClInclude Include="EAThook.h">
+      <Filter>hooks\EAT\EATHook</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

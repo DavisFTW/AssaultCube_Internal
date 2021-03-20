@@ -5,7 +5,6 @@
 #include <sstream>
 #include "gameSetup.h"
 #include "EAThook.h"
-#include "EATHookManager.h"
 #include "hookManager.h"
 namespace utilVars
 {
@@ -19,19 +18,14 @@ namespace object
     hookManager hooks;
 }
 
-void test(int a)
-{
-
-}
 
 DWORD WINAPI entry(LPVOID arg)
 {
     AllocConsole();
     freopen_s(&utilVars::file, "CONOUT$", "w", stdout);
-    //hooks::inithooks(object::eathook);
     object::hooks.initHooks(object::eathook);
     Sleep(1000);
-    //hooks::initunhook(object::eathook);
+    object::hooks.initUnhook(object::eathook);
     return 0;
 }
 
