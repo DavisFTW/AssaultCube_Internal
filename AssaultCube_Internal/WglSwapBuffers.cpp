@@ -1,9 +1,12 @@
 #include <Windows.h>
-#include "EATHookManager.h"
+#include "hookManager.h"
 
-BOOL __stdcall hooks::hk_wglSwapBuffers(HDC hdc)
+BOOL __stdcall hookedFunctions::hk_WglSwapBuffers(HDC hdc)
 {
 	std::cout << "hooked" << std::endl;
-	//return functionCopies::o_wglSwapBuffers(hdc);
-	return false;
+	return 	funcO::o_wglSwapBuffers(hdc);
+	//return false;
 }
+
+
+

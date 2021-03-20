@@ -3,7 +3,6 @@
 #include <iostream>
 #include "EAThook.h"
 #include "gameSetup.h"
-
 namespace hooks
 {
 	extern BOOL __stdcall hk_wglSwapBuffers(HDC hdc);

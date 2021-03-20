@@ -6,6 +6,7 @@
 #include "gameSetup.h"
 #include "EAThook.h"
 #include "EATHookManager.h"
+#include "hookManager.h"
 namespace utilVars
 {
     FILE* file;
@@ -15,19 +16,22 @@ namespace object
     gameSetup game;
     playerDataClass* localData;
     EAThook eathook;
+    hookManager hooks;
 }
 
-typedef void(*cprintf)(char* msg, ...);
+void test(int a)
+{
+
+}
 
 DWORD WINAPI entry(LPVOID arg)
 {
-  
     AllocConsole();
     freopen_s(&utilVars::file, "CONOUT$", "w", stdout);
-
-    hooks::inithooks(object::eathook);
+    //hooks::inithooks(object::eathook);
+    object::hooks.initHooks(object::eathook);
     Sleep(1000);
-    hooks::initunhook(object::eathook);
+    //hooks::initunhook(object::eathook);
     return 0;
 }
 
