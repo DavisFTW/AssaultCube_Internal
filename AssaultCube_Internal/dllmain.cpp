@@ -30,6 +30,7 @@ DWORD WINAPI entry(LPVOID arg)
     object::hooks.initHooks(object::eathook);
     gameSetup::getPlayerData(object::localData);
    // miscFunctions::entityLoop(object::entityData);
+    object::hooks.initUnhook(object::eathook);
     return 0;
 }
 BOOL APIENTRY DllMain(HMODULE hModule,

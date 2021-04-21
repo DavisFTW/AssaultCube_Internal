@@ -24,7 +24,7 @@ void hookManager::initHooks(EAThook& eatInstance)
 
 	//doDamage_begin
 	DWORD hk_doDamageWrapperAddr = reinterpret_cast<DWORD>(&doDamageWrapper);
-
+	std::uintptr_t doDamageSrcCopy = 0;
 	funcO::o_doDamage = reinterpret_cast<funcT::t_doDamage>(detour::trampHook32((BYTE*)0x429C20, (BYTE*)doDamageWrapper, 6));  //#FIXME: store the doDamage original address another way :-)
 	//doDamage_end
 
@@ -42,11 +42,10 @@ void hookManager::initUnhook(EAThook& eatInstance)
 	DWORD originalWglFunction = (DWORD)funcO::o_wglSwapBuffers;
 	
 	eatInstance.EATUnhook(openGLModule, originalWglSwapBuffersPtr, originalWglFunction);
-
 	//openGL_end
 
 	//doDamage_begin
-	// TODO: implement unhooking for doDamage
+	detour::trampUnhook32((BYTE*)doDamageWrapper, (BYTE*)0x42C20, (BYTE*)funcO::o_doDamage, 6);
 	//doDamage_end
 
 }

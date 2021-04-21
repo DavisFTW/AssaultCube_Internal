@@ -3,6 +3,30 @@
 #include "globalAddressess.h"
 
 
+
+/*  # Offsets #
+Player Base:"ac_client.exe"+0x109B74/0x509B74
+Player Health:0xF8
+Player Primary:0x128
+Player Primary Clip:0x150
+Player Secondary:0x114
+Player SecondaryClip:0x13C
+Player Grenade Ammo:0x158
+Player Armor:0xFC
+Player Position XY:0x4
+Player Position XY:0x8
+Player Position Z:0xC
+Player View Angle Verticle:0x44
+Player View Angle Horizontal:0x40
+Time Between Knifes:0x160
+Pistol Timer:0x164
+Primary Timer:0x178
+Grenade Timer(?):0x180
+Mouse Button Down:0x224
+Entity Base:"ac_client.exe"+0x110D90/0x510D90
+TeamOffset1:0x204
+TeamOffset2:0x32C
+*/
 struct Vector3
 {
 	float x, y, z;
@@ -30,7 +54,12 @@ public:
 	char pad_015C[16116]; //0x015C
 }; //Size: 0x4050
 
-
+class offsets
+{
+public:
+	DWORD ViewAngleVer = 0x44;
+	DWORD ViewAngleHor = 0x40;
+};
 namespace gameSetup
 {
 	extern std::uintptr_t* localPlayerPtr;
