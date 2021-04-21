@@ -6,6 +6,8 @@
 #include "gameSetup.h"
 #include "EAThook.h"
 #include "hookManager.h"
+#include "Misc.h"
+#include "Detour.h"
 namespace utilVars
 {
     FILE* file;
@@ -14,25 +16,27 @@ namespace object
 {
     gameSetup game;
     playerDataClass* localData;
+    playerDataClass* entityData;
     EAThook eathook;
     hookManager hooks;
 }
 
-
 DWORD WINAPI entry(LPVOID arg)
 {
+    DWORD oldProtection;
     AllocConsole();
     freopen_s(&utilVars::file, "CONOUT$", "w", stdout);
+
+   
     object::hooks.initHooks(object::eathook);
-    Sleep(1000);
-    object::hooks.initUnhook(object::eathook);
+    object::game.getPlayerData(object::localData);
+   // miscFunctions::entityLoop(object::entityData);
     return 0;
 }
-
 BOOL APIENTRY DllMain(HMODULE hModule,
     DWORD  ul_reason_for_call,
-    LPVOID lpReserved
-)
+    LPVOID lpReserve)
+
 {
     switch (ul_reason_for_call)
     {

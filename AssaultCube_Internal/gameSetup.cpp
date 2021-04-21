@@ -11,8 +11,10 @@ int gameSetup::getHealth()
 	return *health;
 }
 
-void gameSetup::getLocalData(playerDataClass*& playerDataClassObject)
+void gameSetup::getPlayerData(playerDataClass*& playerDataClassObject)
 {
 	playerDataClassObject = reinterpret_cast<playerDataClass*>(*localPlayerPtr);
+
+	std::cout << "your health = " << playerDataClassObject->health << std::endl;
 }
 

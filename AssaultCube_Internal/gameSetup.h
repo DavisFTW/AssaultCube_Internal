@@ -39,6 +39,7 @@ public:
 	gameSetup();   // we get localPlayer as soon as our gameSetup is constructed, since it wont be changing
 	std::uintptr_t* getLocalPtr() { return localPlayerPtr; }
 	int getHealth();
-	void getLocalData(playerDataClass*& playerDataClassObject);
+	void getPlayerData(playerDataClass*& playerDataClassObject);
+	void localPlayerMods(playerDataClass*& playerDataClassObject);
 };
 
