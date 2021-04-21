@@ -1,2 +1,3 @@
-﻿  Detour.cpp
+﻿  dllmain.cpp
+C:\Users\cheat\Desktop\cheats\AssaultCube_Internal\AssaultCube_Internal\AssaultCube_Internal\dllmain.cpp(25,11): warning C4101: 'oldProtection': unreferenced local variable
   AssaultCube_Internal.vcxproj -> C:\Users\cheat\Desktop\cheats\AssaultCube_Internal\AssaultCube_Internal\Debug\AssaultCube_Internal.dll

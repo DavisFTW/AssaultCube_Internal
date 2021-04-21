@@ -20,17 +20,26 @@ namespace object
     hookManager hooks;
 }
 
-DWORD WINAPI entry(LPVOID arg)
+DWORD WINAPI entry(HMODULE hModule)
 {
     DWORD oldProtection;
     AllocConsole();
     freopen_s(&utilVars::file, "CONOUT$", "w", stdout);
 
-   
+    std::cout << "hack" << std::endl;
     object::hooks.initHooks(object::eathook);
     gameSetup::getPlayerData(object::localData);
    // miscFunctions::entityLoop(object::entityData);
     object::hooks.initUnhook(object::eathook);
+
+    while (true)
+    {
+        if (GetAsyncKeyState(VK_INSERT))
+        {
+            FreeConsole();
+            FreeLibraryAndExitThread(hModule, 0); 
+        }
+    }
     return 0;
 }
 BOOL APIENTRY DllMain(HMODULE hModule,
@@ -43,7 +52,7 @@ BOOL APIENTRY DllMain(HMODULE hModule,
     case DLL_PROCESS_ATTACH:
     {
         DisableThreadLibraryCalls(hModule);
-        auto handle = CreateThread(nullptr, 0, entry, hModule, 0, nullptr);
+        auto handle = CreateThread(nullptr, 0, (LPTHREAD_START_ROUTINE)entry, hModule, 0, nullptr);
         if (handle)
             CloseHandle(handle);
 

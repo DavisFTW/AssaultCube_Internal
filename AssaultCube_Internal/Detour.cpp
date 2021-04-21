@@ -75,22 +75,3 @@ void detour::trampUnhook32(BYTE* src, BYTE* dst, BYTE* gateway, const std::uintp
 	}
 
 }
-
-/*
-void detour::UnDetour32(BYTE* src, BYTE* dst, BYTE memBackup, std::uintptr_t srcCopy, const std::uintptr_t len)
-{
-	DWORD oldProtection = 0;
-
-	if (len > 5)
-	{
-		VirtualProtect(src, len, PAGE_EXECUTE_READWRITE, &oldProtection);
-
-		*src = memBackup;
-
-		*reinterpret_cast<std::uintptr_t*>(src + 1) = srcCopy;
-
-		VirtualProtect(src, len, oldProtection, 0);
-	}
-}
-
-*/
