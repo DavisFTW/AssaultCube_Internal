@@ -22,14 +22,20 @@
     <Filter Include="openGL">
       <UniqueIdentifier>{f19619ae-741d-4110-b1cc-420a8eee3706}</UniqueIdentifier>
     </Filter>
-    <Filter Include="hooks\EAT\Hooks">
-      <UniqueIdentifier>{1ebcc68f-60e6-4988-b8a6-afd77399deb3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="hooks\EAT\EATHook">
-      <UniqueIdentifier>{986cda34-4f45-468a-9bad-8f4326c5b8ac}</UniqueIdentifier>
-    </Filter>
     <Filter Include="hooks\VMTHook">
       <UniqueIdentifier>{0137ea79-e7a2-435d-ba20-2e93b42e251e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\wndProc">
+      <UniqueIdentifier>{c3effd85-486a-46d4-a911-bc7997b89094}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cheats">
+      <UniqueIdentifier>{d2d37836-d225-4d67-8878-7fc57a3d731e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\Detour">
+      <UniqueIdentifier>{39fa1ecc-c4ab-4610-af19-70718b5f2bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="hooks\Hooks">
+      <UniqueIdentifier>{1ebcc68f-60e6-4988-b8a6-afd77399deb3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,13 +52,25 @@
       <Filter>openGL</Filter>
     </ClCompile>
     <ClCompile Include="WglSwapBuffers.cpp">
-      <Filter>hooks\EAT\Hooks</Filter>
+      <Filter>hooks\Hooks</Filter>
     </ClCompile>
     <ClCompile Include="hookManager.cpp">
       <Filter>hooks</Filter>
     </ClCompile>
+    <ClCompile Include="wndProcHook.cpp">
+      <Filter>hooks\wndProc</Filter>
+    </ClCompile>
+    <ClCompile Include="Misc.cpp">
+      <Filter>cheats</Filter>
+    </ClCompile>
+    <ClCompile Include="Detour.cpp">
+      <Filter>hooks\Detour</Filter>
+    </ClCompile>
     <ClCompile Include="EAThook.cpp">
-      <Filter>hooks\EAT\EATHook</Filter>
+      <Filter>hooks\EAT</Filter>
+    </ClCompile>
+    <ClCompile Include="doDamage.cpp">
+      <Filter>hooks\Hooks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -68,8 +86,17 @@
     <ClInclude Include="hookManager.h">
       <Filter>hooks</Filter>
     </ClInclude>
+    <ClInclude Include="wndProcHook.h">
+      <Filter>hooks\wndProc</Filter>
+    </ClInclude>
+    <ClInclude Include="Misc.h">
+      <Filter>cheats</Filter>
+    </ClInclude>
+    <ClInclude Include="Detour.h">
+      <Filter>hooks\Detour</Filter>
+    </ClInclude>
     <ClInclude Include="EAThook.h">
-      <Filter>hooks\EAT\EATHook</Filter>
+      <Filter>hooks\EAT</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

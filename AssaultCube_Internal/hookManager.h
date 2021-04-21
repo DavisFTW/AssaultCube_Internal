@@ -3,7 +3,7 @@
 #include "EAThook.h"
 #include "wndProcHook.h"
 #include "Detour.h"
-
+#include "gameSetup.h"
 void  doDamageWrapper(int weaponIndex, int dynamicPlayerAddr, int Damage);
 
 namespace hookedFunctions

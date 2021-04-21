@@ -14,7 +14,6 @@ namespace utilVars
 }
 namespace object
 {
-    gameSetup game;
     playerDataClass* localData;
     playerDataClass* entityData;
     EAThook eathook;
@@ -29,7 +28,7 @@ DWORD WINAPI entry(LPVOID arg)
 
    
     object::hooks.initHooks(object::eathook);
-    object::game.getPlayerData(object::localData);
+    gameSetup::getPlayerData(object::localData);
    // miscFunctions::entityLoop(object::entityData);
     return 0;
 }

@@ -90,7 +90,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>Default</LanguageStandard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,20 +152,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Detour.cpp" />
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="doDamage.cpp" />
     <ClCompile Include="EAThook.cpp" />
     <ClCompile Include="gameSetup.cpp" />
     <ClCompile Include="glDraw.cpp" />
     <ClCompile Include="globalAddressess.cpp" />
     <ClCompile Include="hookManager.cpp" />
+    <ClCompile Include="Misc.cpp" />
     <ClCompile Include="WglSwapBuffers.cpp" />
+    <ClCompile Include="wndProcHook.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Detour.h" />
     <ClInclude Include="EAThook.h" />
     <ClInclude Include="gameSetup.h" />
     <ClInclude Include="glDraw.h" />
     <ClInclude Include="globalAddressess.h" />
     <ClInclude Include="hookManager.h" />
+    <ClInclude Include="Misc.h" />
+    <ClInclude Include="wndProcHook.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

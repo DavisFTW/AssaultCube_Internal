@@ -31,6 +31,13 @@ public:
 }; //Size: 0x4050
 
 
+namespace gameSetup
+{
+	extern std::uintptr_t* localPlayerPtr;
+	void getPlayerData(playerDataClass*& playerDataClassObject);
+}
+
+/*
 class gameSetup
 {
 private:
@@ -42,4 +49,4 @@ public:
 	void getPlayerData(playerDataClass*& playerDataClassObject);
 	void localPlayerMods(playerDataClass*& playerDataClassObject);
 };
-
+*/
